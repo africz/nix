@@ -1,5 +1,5 @@
-git clone git@github.com:africz/nix.git
-cd nix\docker
+:git clone git@github.com:africz/nix.git
+cd nix/docker
 
 edit .env
 
@@ -13,6 +13,11 @@ PLATFORM=amd64 # amd64 for Linux | arm64v8 | for M2, M1
 PLATFORM_TRAEFIK=amd64 # amd64 for Linux | arm64 | for M2, M1
 PROJECT_PATH=/projects/nix
 
+Generate ssl certificate for the project
+cd nix/docker/traefik
+./certgen
+
+cd nix/docker
 make install
 
 remove project docker images, volumes
@@ -74,8 +79,3 @@ make test
 - mysql          - version 8 
 - mailbox        - local smtp, mailbox ideal for development 
 
-
-
-
-
-# nix

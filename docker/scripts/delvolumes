@@ -1,0 +1,1 @@
+docker volume ls | grep $1 | awk '{print $2}' | xargs docker volume rm

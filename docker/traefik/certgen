@@ -1,0 +1,4 @@
+#!/bin/bash
+source ../.env
+mkcert -install
+mkcert -key-file ./config/ssl/key.pem -cert-file ./config/ssl/cert.pem ${PROJECT_NAME}.localhost
