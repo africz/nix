@@ -107,6 +107,10 @@ Run tests
 ![image](https://github.com/africz/nix/assets/5225210/59a51f27-bb93-4d5d-8fd6-184f43d5ff2c)
 
 
+I used a github repo, to make validation test faster instead of write test of each validation 
+I used this repo to test validation rules in one block.
+
+https://github.com/jasonmccreary/laravel-test-assertions
 
 
 
