@@ -1,6 +1,6 @@
-:git clone git@github.com:africz/nix.git
+git clone git@github.com:africz/nix.git
+# Set Docker environment
 cd nix/docker
-
 edit .env
 
 # MAC installation
@@ -13,31 +13,16 @@ PLATFORM=amd64 # amd64 for Linux | arm64v8 | for M2, M1
 PLATFORM_TRAEFIK=amd64 # amd64 for Linux | arm64 | for M2, M1
 PROJECT_PATH=/projects/nix
 
-Generate ssl certificate for the project
-cd nix/docker/traefik
+# Generate ssl certificate
+cd traefik
 ./certgen
 
-cd nix/docker
+# Set project environment
+cd ../../root
+cp .env.example .env
+
+cd ../docker
 make install
-
-remove project docker images, volumes
-make uninstall
-
-Most used make commands:
-------------------------
-make up
-make down
-make mount/apache
-make artisan
-make artisan migrate:fresh
-make composer/update 
-make logs/apache
-make test
-make build
-make build/apache
-make uninstall
-
-make help to see all of them
 
 Start application 
 Visit https://nix.localhost
@@ -66,7 +51,6 @@ In a real word application we can use more such as:
 - regular security analysis SonarQube as an example 
 
 
-
 # Run tests
 
 make test
@@ -79,3 +63,18 @@ make test
 - mysql          - version 8 
 - mailbox        - local smtp, mailbox ideal for development 
 
+# Most used make commands:
+
+make up
+make down
+make mount/apache
+make artisan
+make artisan migrate:fresh
+make composer/update 
+make logs/apache
+make test
+make build
+make build/apache
+make uninstall (remove project docker images, volumes)
+
+make help to see all of them
