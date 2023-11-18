@@ -20,7 +20,7 @@ cd traefik
 # Set project environment
 cd ../../root
 cp .env.example .env
-
+# Install application 
 cd ../docker
 make install
 
