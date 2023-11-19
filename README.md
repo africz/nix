@@ -82,6 +82,7 @@ make uninstall (remove project docker images, volumes)
 make help to see all of them
 
 # Install steps on screen shoots
+![image](https://user-images.githubusercontent.com/africz/nix/assets/5225210/3a96b771-bb4c-4835-a893-2c1223c8658a)
 ![image](https://github.com/africz/nix/assets/5225210/3a96b771-bb4c-4835-a893-2c1223c8658a)
 ![image](https://github.com/africz/nix/assets/5225210/2675b35f-4bda-4687-9682-8c65326ec47f)
 ![image](https://github.com/africz/nix/assets/5225210/5876f50e-0c16-471a-9efa-84e6ea8c8a25)
