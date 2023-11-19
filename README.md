@@ -67,19 +67,19 @@ make test
 
 # Most used make commands:
 
-make up
-make down
-make mount/apache
-make artisan
-make artisan migrate:fresh
-make composer/update 
-make logs/apache
-make test
-make build
-make build/apache
-make uninstall (remove project docker images, volumes)
+- make up
+- make down
+- make mount/apache
+- make artisan
+- make artisan migrate:fresh
+- make composer/update 
+- make logs/apache
+- make test
+- make build
+- make build/apache
+- make uninstall (remove project docker images, volumes)
 
-make help to see all of them
+- make help to see all of them
 
 I used a github repo, to make validation test faster instead of write test of each validation 
 I used this repo to test validation rules in one block.
