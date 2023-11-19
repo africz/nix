@@ -1,31 +1,39 @@
 # Get the source code
+```
 git clone git@github.com:africz/nix.git
-
+```
 # Set Docker environment
+```
 cd nix/docker
-edit .env
-
+vi .env
+```
 # MAC installation
+```
 PLATFORM=arm64v8 # amd64 for Linux | arm64v8 | for M2, M1
 PLATFORM_TRAEFIK=arm64 # amd64 for Linux | arm64 | for M2, M1
 PROJECT_PATH=/Volumes/projects/nix
-
+```
 # Linux installation
+```
 PLATFORM=amd64 # amd64 for Linux | arm64v8 | for M2, M1
 PLATFORM_TRAEFIK=amd64 # amd64 for Linux | arm64 | for M2, M1
 PROJECT_PATH=/projects/nix
-
+```
 # Generate ssl certificate
+```
 cd traefik
 ./certgen
-
+```
 # Set project environment
+```
 cd ../../root
 cp .env.example .env
+```
 # Install application 
+```
 cd ../docker
 make install
-
+```
 Start application 
 Visit https://nix.localhost
 
@@ -54,9 +62,9 @@ In a real word application we can use more such as:
 
 
 # Run tests
-
+```
 make test
-
+```
 # Docker structure
 
 - traefik        - load balancer provide named host like nix.localhost
